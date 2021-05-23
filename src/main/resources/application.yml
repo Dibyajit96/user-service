@@ -2,9 +2,9 @@ server:
   port: 9112
 spring:
   datasource:
-    url: ${JDBC_DATABASE_URL:jdbc:mysql://localhost:3306/user-service?serverTimezone=UTC}
-    username: ${JDBC_DATABASE_USERNAME:root}
-    password: ${JDBC_DATABASE_PASSWORD:root}
+    url: jdbc:mysql://${mysql:localhost}:3306/deliverydb?createDatabaseIfNotExist=true
+    username: root
+    password: root
   dbcp2:
     max-wait-millis: 30000
     validation-query: "SELECT 1"
